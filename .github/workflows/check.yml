@@ -62,8 +62,8 @@ jobs:
       matrix:
         toolchain: [stable, beta]
     steps:
-      # Use actions/checkout@v3 becuase of centos7
-      - uses: actions/checkout@v3
+      # Use actions/checkout@v4 becuase of centos7
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Setup MXL Relm4 components build environment
@@ -84,8 +84,8 @@ jobs:
       contents: read
       checks: write
     steps:
-      # Use actions/checkout@v3 becuase of centos7
-      - uses: actions/checkout@v3
+      # Use actions/checkout@v4 becuase of centos7
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Setup MXL Relm4 components build environment
@@ -105,8 +105,8 @@ jobs:
       contents: read
       checks: write
     steps:
-      # Use actions/checkout@v3 becuase of centos7
-      - uses: actions/checkout@v3
+      # Use actions/checkout@v4 becuase of centos7
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Setup MXL Relm4 components build environment
