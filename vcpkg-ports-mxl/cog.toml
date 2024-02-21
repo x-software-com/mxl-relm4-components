@@ -1,0 +1,22 @@
+from_latest_tag = false
+ignore_merge_commits = true
+tag_prefix = "v"
+branch_whitelist = ["main"]
+pre_bump_hooks = []
+post_bump_hooks = ["git push", "git push origin v{{version}}"]
+pre_package_bump_hooks = []
+post_package_bump_hooks = []
+
+[git_hooks.commit-msg]
+script = """#!/bin/sh
+set -e
+
+echo "[ cog verify ]"
+cog verify --file $1
+"""
+
+[changelog]
+
+[commit_types]
+
+[bump_profiles]
