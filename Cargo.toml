@@ -8,12 +8,12 @@ edition = "2021"
 [dependencies]
 log = "0.4"
 const_format = "0.2"
-relm4 = { version = "0.7.0-beta.2", features = [
+relm4 = { version = "=0.7.0-rc.1", features = [
     "macros",
     "libadwaita",
     "gnome_44",
 ] }
-relm4-components = "0.7.0-beta.2"
+relm4-components = "=0.7.0-rc.1"
 relm4-icons = { version = "0.7.0-alpha.2", default-features = false, optional = true }
 mxl-base = { git = "https://github.com/x-software-com/mxl-base.git", tag = "v0.1.0", optional = true }
 urlencoding = { version = "2", default-features = false, optional = true }
