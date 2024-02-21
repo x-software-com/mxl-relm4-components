@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.1](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.0..v0.1.1) - 2024-02-21
+#### Miscellaneous Chores
+- bump relm4 version - ([887e516](https://github.com/x-software-com/mxl-relm4-components/commit/887e516bc8c29c00ab8e611f51dc59b37262172a)) - acpiccolo
+
+- - -
+
 ## [v0.1.0](https://github.com/x-software-com/mxl-relm4-components/compare/d5c08128e4415f186d2bb534202bec3534861171..v0.1.0) - 2024-02-21
 
 - - -
