@@ -13,13 +13,17 @@ use relm4_components::save_dialog::{SaveDialog, SaveDialogMsg, SaveDialogRespons
 use relm4_icons::icon_name;
 
 const SUPPORT_EMAIL: &str = "support@x-software.com";
-const REPORT_SUBJECT: &str = "Report file for MXL Recorder";
+macro_rules! report_subject_fmt {
+    () => {
+        "Report file for {app_name}"
+    };
+}
 macro_rules! report_body_fmt {
     () => {
         "Hello X-Software Support,\n\
 \n\
 \n\
-I would like get assistance for MXL Recorder.\n\
+I would like get assistance for {app_name}.\n\
 \n\
 Thanks!"
     };
@@ -31,8 +35,8 @@ fn create_report_email_link() -> String {
     format!(
         "<a href=\"mailto:{email}?subject={subject}&amp;body={body}\">{email}</a>",
         email = SUPPORT_EMAIL,
-        subject = encode(REPORT_SUBJECT),
-        body = encode(report_body_fmt!())
+        subject = encode(&format!(report_subject_fmt!(), app_name = mxl_base::about().app_name)),
+        body = encode(&format!(report_body_fmt!(), app_name = mxl_base::about().app_name))
     )
 }
 
