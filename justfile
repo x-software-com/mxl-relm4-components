@@ -4,6 +4,7 @@ test:
     cargo test --no-fail-fast --workspace --locked --all-features --all-targets
 
 hack:
+    cargo install cargo-hack
     cargo hack --feature-powerset check
 
 audit:
