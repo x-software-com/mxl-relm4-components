@@ -6,6 +6,10 @@ test:
 hack:
     cargo hack --feature-powerset check
 
+audit:
+    cargo install cargo-audit
+    cargo audit
+
 clippy:
     scripts/clippy.sh
 
