@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.2](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.1..v0.1.2) - 2024-02-22
+#### Build system
+- update Cargo.toml - ([ea19c7c](https://github.com/x-software-com/mxl-relm4-components/commit/ea19c7c420a15b904a0ef2d4f56c0ef3872114bb)) - acpiccolo
+
+- - -
+
 ## [v0.1.1](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.0..v0.1.1) - 2024-02-21
 #### Miscellaneous Chores
 - bump relm4 version - ([887e516](https://github.com/x-software-com/mxl-relm4-components/commit/887e516bc8c29c00ab8e611f51dc59b37262172a)) - acpiccolo
