@@ -2,7 +2,7 @@ use super::{
     messages::{internal::PrivateMsg, ProblemReportDialogInput, ProblemReportDialogOutput},
     model::{ProblemReportDialog, ProblemReportDialogInit},
 };
-use crate::fl;
+use crate::localization::helper::fl;
 use relm4::{
     adw::{self, prelude::*},
     gtk::glib,
