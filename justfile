@@ -12,7 +12,7 @@ audit:
     cargo audit
 
 clippy:
-    scripts/clippy.sh
+    cargo clippy --quiet --release --all-targets --all-features
 
 mxl-env:
     ./mxl-env.py --print-env --no-export-print-env > .mxl-env
