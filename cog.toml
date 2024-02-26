@@ -39,7 +39,10 @@ template = "remote"
 remote = "github.com"
 repository = "mxl-relm4-components"
 owner = "x-software-com"
-authors = [{ signature = "Andreas", username = "acpiccolo" }]
+authors = [
+  { signature = "Andreas", username = "acpiccolo" },
+  { signature = "Marc", username = "marcbull" },
+]
 
 [commit_types]
 
