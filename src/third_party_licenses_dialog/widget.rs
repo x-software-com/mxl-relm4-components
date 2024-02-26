@@ -6,7 +6,7 @@ use super::{
     messages::{internal::PrivateMsg, ThirdPartyLicensesComponentInput},
     model::ThirdPartyLicensesComponentModel,
 };
-use crate::fl;
+use crate::localization::helper::fl;
 
 use mxl_base::third_party_licenses;
 
