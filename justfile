@@ -5,7 +5,7 @@ test:
 
 hack:
     cargo install cargo-hack
-    cargo hack --feature-powerset check
+    cargo hack --feature-powerset --no-dev-deps check
 
 audit:
     cargo install cargo-audit
