@@ -2,10 +2,7 @@ use mxl_base::third_party_licenses::mithra_lib::third_party_licenses::ThirdParty
 use relm4::{adw::prelude::*, factory::FactoryVecDeque, prelude::*};
 use relm4_icons::icon_name;
 
-use super::{
-    messages::{internal::PrivateMsg, ThirdPartyLicensesComponentInput},
-    model::ThirdPartyLicensesComponentModel,
-};
+use super::{messages::ThirdPartyLicensesComponentInput, model::ThirdPartyLicensesComponentModel};
 use crate::localization::helper::fl;
 
 use mxl_base::third_party_licenses;
@@ -111,23 +108,7 @@ impl Component for ThirdPartyLicensesComponentModel {
 
         let file_list_box = model.uris.widget();
         let widgets: ThirdPartyLicensesComponentModelWidgets = view_output!();
-
-        {
-            let controller = gtk::EventControllerKey::new();
-            controller.connect_key_pressed({
-                let sender = sender.clone();
-                move |_, key, _keycode, _modifiers| {
-                    if key == gtk::gdk::Key::Escape {
-                        sender.input(ThirdPartyLicensesComponentInput::PrivateMessage(
-                            PrivateMsg::RequestClose,
-                        ));
-                        return gtk::glib::Propagation::Stop;
-                    }
-                    gtk::glib::Propagation::Proceed
-                }
-            });
-            root.add_controller(controller);
-        }
+        crate::gtk::do_close_on_escape(&root);
 
         sender
             .input_sender()
@@ -142,7 +123,7 @@ impl Component for ThirdPartyLicensesComponentModel {
         widgets: &mut Self::Widgets,
         msg: Self::Input,
         sender: ComponentSender<Self>,
-        root: &Self::Root,
+        _root: &Self::Root,
     ) {
         match msg {
             ThirdPartyLicensesComponentInput::Activate(index) => {
@@ -167,9 +148,6 @@ impl Component for ThirdPartyLicensesComponentModel {
                     widgets.stack_switcher.set_stack(Some(stack));
                 }
             }
-            ThirdPartyLicensesComponentInput::PrivateMessage(msg) => match msg {
-                PrivateMsg::RequestClose => root.close(),
-            },
         }
     }
 }
