@@ -20,15 +20,18 @@ pub(crate) static LANGUAGE_LOADER: Lazy<FluentLanguageLoader> = Lazy::new(|| {
 });
 
 pub(crate) mod helper {
+    #[allow(unused_macros)]
     macro_rules! fl {
-    ($message_id:literal) => {{
-        i18n_embed_fl::fl!($crate::localization::LANGUAGE_LOADER, $message_id)
-    }};
+        ($message_id:literal) => {{
+            i18n_embed_fl::fl!($crate::localization::LANGUAGE_LOADER, $message_id)
+        }};
 
-    ($message_id:literal, $($args:expr),*) => {{
-        i18n_embed_fl::fl!($crate::localization::LANGUAGE_LOADER, $message_id, $($args), *)
-    }};
-}
+        ($message_id:literal, $($args:expr),*) => {{
+            i18n_embed_fl::fl!($crate::localization::LANGUAGE_LOADER, $message_id, $($args), *)
+        }};
+    }
+
+    #[allow(unused_imports)]
     pub(crate) use fl;
 }
 
