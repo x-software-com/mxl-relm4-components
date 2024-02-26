@@ -2,6 +2,27 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.3](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.2..v0.1.3) - 2024-02-26
+#### Bug Fixes
+- fix hack warning if no feature is enabled - ([542fce1](https://github.com/x-software-com/mxl-relm4-components/commit/542fce1fd48530dc1934a65a270aae07bbc57b9e)) - marcbull
+- use new localization helper - ([de69173](https://github.com/x-software-com/mxl-relm4-components/commit/de69173a33c6c64445d5df8e28343d7c45db8d3c)) - marcbull
+- replace hard-coded application name in the e-mail message of report components - ([f1ed2ce](https://github.com/x-software-com/mxl-relm4-components/commit/f1ed2ce5e9c5951b2f2b5e49769ff40a4b518b1f)) - acpiccolo
+#### Features
+- add third party licenses dialog - ([fef8424](https://github.com/x-software-com/mxl-relm4-components/commit/fef84248bafdb22f5be4dba995c86251f3686dce)) - marcbull
+#### Miscellaneous Chores
+- replace vcpkg-ports-mxl directory with submodule - ([c4169a5](https://github.com/x-software-com/mxl-relm4-components/commit/c4169a5629001b5004786ef7cce44f2d0ebccec2)) - marcbull
+- update authors list - ([87f34e5](https://github.com/x-software-com/mxl-relm4-components/commit/87f34e53254138eba0a2587192e48e19c1f8f3dc)) - marcbull
+- run 'cargo clippy' directly - ([da74687](https://github.com/x-software-com/mxl-relm4-components/commit/da746873932a6d208ca2177162af0a438dba04d4)) - marcbull
+- use just in cog pre-bump-hooks - ([7c90d4a](https://github.com/x-software-com/mxl-relm4-components/commit/7c90d4ad83f543b414dd9505f5a4b7e8ff38627f)) - marcbull
+- install hack before check in justfile - ([c81367f](https://github.com/x-software-com/mxl-relm4-components/commit/c81367fe5c37fed44d99f658e6ca10a46a223580)) - marcbull
+- add audit to justfile - ([dbfdd92](https://github.com/x-software-com/mxl-relm4-components/commit/dbfdd929707e281c3e4125728ae722fa03a216ad)) - marcbull
+#### Refactoring
+- make localization macro private - ([ad97a76](https://github.com/x-software-com/mxl-relm4-components/commit/ad97a76bd3cadd1a46bf19cb155bc71a42bf5485)) - acpiccolo
+#### Tests
+- add option --no-dev-deps to cargo hack - ([d7536c9](https://github.com/x-software-com/mxl-relm4-components/commit/d7536c962cf2085518521ea0be8b58e479946080)) - marcbull
+
+- - -
+
 ## [v0.1.2](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.1..v0.1.2) - 2024-02-22
 #### Build system
 - update Cargo.toml - ([ea19c7c](https://github.com/x-software-com/mxl-relm4-components/commit/ea19c7c420a15b904a0ef2d4f56c0ef3872114bb)) - acpiccolo
