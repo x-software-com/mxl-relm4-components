@@ -19,9 +19,7 @@ relm4 = { version = "=0.7.0-rc.1", features = [
 ] }
 relm4-components = "=0.7.0-rc.1"
 relm4-icons = { version = "0.7.0-alpha.2", default-features = false, optional = true }
-mxl-base = { git = "https://github.com/x-software-com/mxl-base.git", tag = "v0.2.0", optional = true }
 mithra = { git = "https://github.com/x-software-com/mithra.git", tag = "v0.1.0", optional = true }
-urlencoding = { version = "2", default-features = false, optional = true }
 
 # Internationalization:
 i18n-embed-fl = { version = "0.8" }
@@ -33,15 +31,4 @@ i18n-embed = { version = "0.14", features = [
 ] }
 
 [features]
-create_report_dialog = [
-    "dep:mxl-base",
-    "relm4-icons/right-large",
-    "dep:urlencoding",
-]
-problem_report_dialog = [
-    "dep:mxl-base",
-    "relm4-icons/right-large",
-    "relm4-icons/left-large",
-    "dep:urlencoding",
-]
 third_party_licenses_dialog = ["dep:mithra", "relm4-icons/warning"]

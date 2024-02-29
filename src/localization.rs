@@ -10,12 +10,16 @@ use rust_embed::RustEmbed;
 struct Localizations;
 
 pub(crate) static LANGUAGE_LOADER: Lazy<FluentLanguageLoader> = Lazy::new(|| {
-    let loader: FluentLanguageLoader = fluent_language_loader!();
-
+    let loader = fluent_language_loader!();
     loader
         .load_fallback_language(&Localizations)
         .expect("Error while loading fallback language");
 
+    let localizer = DefaultLocalizer::new(&loader, &Localizations);
+    let requested_languages = DesktopLanguageRequester::requested_languages();
+    if let Err(error) = localizer.select(&requested_languages) {
+        log::error!("Error while loading language: {error}");
+    }
     loader
 });
 
@@ -33,18 +37,4 @@ pub(crate) mod helper {
 
     #[allow(unused_imports)]
     pub(crate) use fl;
-}
-
-// Get the `Localizer` to be used for localizing this library.
-pub(crate) fn localizer() -> Box<dyn Localizer> {
-    Box::new(DefaultLocalizer::new(&*LANGUAGE_LOADER, &Localizations))
-}
-
-pub(crate) fn init() {
-    let localizer = crate::localization::localizer();
-    let requested_languages = DesktopLanguageRequester::requested_languages();
-
-    if let Err(error) = localizer.select(&requested_languages) {
-        log::error!("Error while loading language: {error}");
-    }
 }
