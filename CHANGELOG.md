@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.4](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.3..v0.1.4) - 2024-02-29
+#### Bug Fixes
+- moved some code to a different component - ([2d7561b](https://github.com/x-software-com/mxl-relm4-components/commit/2d7561b60dab340823efe32a53ee435ebd03e694)) - acpiccolo
+- remove mxl_base usage in third_party_licenses - ([0cdf967](https://github.com/x-software-com/mxl-relm4-components/commit/0cdf9677b1ea8ae1b02157d604a3ba2149ab820f)) - marcbull
+#### Miscellaneous Chores
+- use generic dialog closing method for third-party-dialog - ([cc02751](https://github.com/x-software-com/mxl-relm4-components/commit/cc02751ad51c21bcbfc2ec42c67014762fd70df4)) - acpiccolo
+
+- - -
+
 ## [v0.1.3](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.2..v0.1.3) - 2024-02-26
 #### Bug Fixes
 - fix hack warning if no feature is enabled - ([542fce1](https://github.com/x-software-com/mxl-relm4-components/commit/542fce1fd48530dc1934a65a270aae07bbc57b9e)) - marcbull
