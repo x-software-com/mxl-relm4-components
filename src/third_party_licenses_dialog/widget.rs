@@ -1,13 +1,14 @@
-use mxl_base::third_party_licenses::mithra_lib::third_party_licenses::ThirdPartyLibrary;
+use mithra_lib::third_party_licenses::ThirdPartyLibrary;
 use relm4::{adw::prelude::*, factory::FactoryVecDeque, prelude::*};
 use relm4_icons::icon_name;
 
-use super::{messages::ThirdPartyLicensesComponentInput, model::ThirdPartyLicensesComponentModel};
+use super::{
+    factory_packages::{ThirdPartyLicensePackageInit, ThirdPartyLicensePackageInput},
+    helper,
+    messages::ThirdPartyLicensesComponentInput,
+    model::ThirdPartyLicensesComponentModel,
+};
 use crate::localization::helper::fl;
-
-use mxl_base::third_party_licenses;
-
-use super::factory_packages::{ThirdPartyLicensePackageInit, ThirdPartyLicensePackageInput};
 
 #[relm4::component(pub)]
 impl Component for ThirdPartyLicensesComponentModel {
@@ -93,7 +94,7 @@ impl Component for ThirdPartyLicensesComponentModel {
     }
 
     fn init(_init: Self::Init, root: Self::Root, sender: ComponentSender<Self>) -> ComponentParts<Self> {
-        let third_party_libs = third_party_licenses::Builder::new().build().unwrap_or_default();
+        let third_party_libs = helper::LicensesBuilder::new().build().unwrap_or_default();
 
         let uris = FactoryVecDeque::builder().launch(gtk::ListBox::default()).detach();
 

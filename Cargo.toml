@@ -9,6 +9,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1"
 log = "0.4"
 const_format = "0.2"
 relm4 = { version = "=0.7.0-rc.1", features = [
@@ -19,6 +20,7 @@ relm4 = { version = "=0.7.0-rc.1", features = [
 relm4-components = "=0.7.0-rc.1"
 relm4-icons = { version = "0.7.0-alpha.2", default-features = false, optional = true }
 mxl-base = { git = "https://github.com/x-software-com/mxl-base.git", tag = "v0.2.0", optional = true }
+mithra = { git = "https://github.com/x-software-com/mithra.git", tag = "v0.1.0", optional = true }
 urlencoding = { version = "2", default-features = false, optional = true }
 
 # Internationalization:
@@ -42,7 +44,4 @@ problem_report_dialog = [
     "relm4-icons/left-large",
     "dep:urlencoding",
 ]
-third_party_licenses_dialog = [
-    "mxl-base/third_party_licenses",
-    "relm4-icons/warning",
-]
+third_party_licenses_dialog = ["dep:mithra", "relm4-icons/warning"]

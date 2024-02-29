@@ -1,4 +1,4 @@
-use mxl_base::third_party_licenses::mithra_lib::third_party_licenses::License;
+use mithra_lib::third_party_licenses::License;
 use relm4::{gtk::prelude::*, prelude::*, FactorySender};
 
 #[derive(Debug)]
