@@ -1,3 +1,6 @@
+pub extern crate relm4;
+pub extern crate relm4_components;
+
 pub mod gtk;
 mod localization;
 
