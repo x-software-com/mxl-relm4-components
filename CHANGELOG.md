@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.6](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.5..v0.1.6) - 2024-03-07
+#### Bug Fixes
+- localization init() - ([8dfd03a](https://github.com/x-software-com/mxl-relm4-components/commit/8dfd03a56a50023e5ababd81de62964b418ddd5a)) - acpiccolo
+
+- - -
+
 ## [v0.1.5](https://github.com/x-software-com/mxl-relm4-components/compare/v0.1.4..v0.1.5) - 2024-03-06
 #### Refactoring
 - export create relm4 and relm4_components - ([01cbc9c](https://github.com/x-software-com/mxl-relm4-components/commit/01cbc9c81780d2f0c78bea5a9d0a49afc1aa3959)) - acpiccolo
