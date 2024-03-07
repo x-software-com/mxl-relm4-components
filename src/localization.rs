@@ -2,15 +2,19 @@ use i18n_embed::{
     fluent::{fluent_language_loader, FluentLanguageLoader},
     DefaultLocalizer, DesktopLanguageRequester, LanguageLoader, Localizer,
 };
-use once_cell::sync::Lazy;
+use once_cell::sync::OnceCell;
 use rust_embed::RustEmbed;
 
 #[derive(RustEmbed)]
 #[folder = "i18n/"]
 struct Localizations;
 
-#[allow(dead_code)]
-pub(crate) static LANGUAGE_LOADER: Lazy<FluentLanguageLoader> = Lazy::new(|| {
+// A language loader must always needs to be initialized by an init function.
+// Do not use an automatic initialization implementation such as "once_cell::sync::Lacy",
+// this can lead to a deadlock!
+pub static LANGUAGE_LOADER: OnceCell<FluentLanguageLoader> = OnceCell::new();
+
+pub(crate) fn init() {
     let loader = fluent_language_loader!();
     loader
         .load_fallback_language(&Localizations)
@@ -21,18 +25,23 @@ pub(crate) static LANGUAGE_LOADER: Lazy<FluentLanguageLoader> = Lazy::new(|| {
     if let Err(error) = localizer.select(&requested_languages) {
         log::error!("Error while loading language: {error}");
     }
-    loader
-});
+    LANGUAGE_LOADER.set(loader).expect("Localization already initialized");
+}
+
+#[allow(dead_code)]
+pub(crate) fn language_loader() -> &'static FluentLanguageLoader {
+    LANGUAGE_LOADER.get().expect("Localization is not initialized")
+}
 
 pub(crate) mod helper {
     #[allow(unused_macros)]
     macro_rules! fl {
         ($message_id:literal) => {{
-            i18n_embed_fl::fl!($crate::localization::LANGUAGE_LOADER, $message_id)
+            i18n_embed_fl::fl!($crate::localization::language_loader(), $message_id)
         }};
 
         ($message_id:literal, $($args:expr),*) => {{
-            i18n_embed_fl::fl!($crate::localization::LANGUAGE_LOADER, $message_id, $($args), *)
+            i18n_embed_fl::fl!($crate::localization::language_loader(), $message_id, $($args), *)
         }};
     }
 
