@@ -17,7 +17,7 @@ relm4 = { version = "=0.7.0-rc.1", features = [
     "libadwaita",
     "gnome_44",
 ] }
-relm4-components = "=0.7.0-rc.1"
+relm4-components = "=0.8.1"
 relm4-icons = { version = "0.7.0-alpha.2", default-features = false, optional = true }
 mithra = { git = "https://github.com/x-software-com/mithra.git", tag = "v0.1.0", optional = true }
 
