@@ -12,7 +12,7 @@ edition = "2021"
 anyhow = "1"
 log = "0.4"
 const_format = "0.2"
-relm4 = { version = "=0.7.0-rc.1", features = [
+relm4 = { version = "=0.8.1", features = [
     "macros",
     "libadwaita",
     "gnome_44",
