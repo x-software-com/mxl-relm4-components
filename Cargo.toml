@@ -12,13 +12,9 @@ edition = "2021"
 anyhow = "1"
 log = "0.4"
 const_format = "0.2"
-relm4 = { version = "=0.7.0-rc.1", features = [
-    "macros",
-    "libadwaita",
-    "gnome_44",
-] }
-relm4-components = "=0.7.0-rc.1"
-relm4-icons = { version = "0.7.0-alpha.2", default-features = false, optional = true }
+relm4 = { version = "=0.8.1", features = ["macros", "libadwaita", "gnome_44"] }
+relm4-components = "=0.8.1"
+relm4-icons = { version = "0.8.2", default-features = false, optional = true }
 mithra = { git = "https://github.com/x-software-com/mithra.git", tag = "v0.1.0", optional = true }
 
 # Internationalization:
@@ -31,4 +27,4 @@ i18n-embed = { version = "0.14", features = [
 ] }
 
 [features]
-third_party_licenses_dialog = ["dep:mithra", "relm4-icons/warning"]
+third_party_licenses_dialog = ["dep:mithra", "relm4-icons/all"]

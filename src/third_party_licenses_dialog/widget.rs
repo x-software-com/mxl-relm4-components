@@ -1,6 +1,6 @@
 use mithra_lib::third_party_licenses::ThirdPartyLibrary;
 use relm4::{adw::prelude::*, factory::FactoryVecDeque, prelude::*};
-use relm4_icons::icon_name;
+use relm4_icons::icon_names;
 
 use super::{
     factory_packages::{ThirdPartyLicensePackageInit, ThirdPartyLicensePackageInput},
@@ -68,7 +68,7 @@ impl Component for ThirdPartyLicensesComponentModel {
                             set_visible: model.show_placeholder,
                             set_hexpand: true,
                             set_vexpand: true,
-                            set_icon_name: Some(icon_name::WARNING),
+                            set_icon_name: Some(icon_names::WARNING),
                             set_title: &fl!("third-party-licenses", "not-found"),
                             set_description: Some(&fl!("third-party-licenses", "not-found-desc")),
                         }
