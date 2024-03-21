@@ -19,6 +19,8 @@ where
 }
 
 pub fn do_close_on_escape(window: &(impl IsA<gtk::Window> + IsA<gtk::Widget>)) {
-    let clone = window.clone();
-    do_closure_on_escape(window, move || clone.close());
+    do_closure_on_escape(window, {
+        let window = window.clone();
+        move || window.close()
+    });
 }
