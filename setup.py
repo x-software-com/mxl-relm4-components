@@ -16,7 +16,7 @@ def setup():
 
     setup_tools(options.ci)
     if options.vcpkg:
-        setup_vcpkg('mxl_relm4_components', '2024.01.12')
+        setup_vcpkg('mxl_relm4_components', '2024.03.25')
     setup_write_mxl_env()
 
 
