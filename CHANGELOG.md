@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.10](https://github.com/x-software-com/mxl-relm4-components/compare/3fdc9ae1769eae1101c6984e67d7778cb18ae4ab..v0.1.10) - 2024-04-08
+#### Miscellaneous Chores
+- upgrade submodule - ([3fdc9ae](https://github.com/x-software-com/mxl-relm4-components/commit/3fdc9ae1769eae1101c6984e67d7778cb18ae4ab)) - acpiccolo
+
+- - -
+
 ## [v0.1.9](https://github.com/x-software-com/mxl-relm4-components/compare/c6df04620bc3a69ffdc7eff4426d1d402642559e..v0.1.9) - 2024-03-21
 #### Bug Fixes
 - added gtk and adw initialization - ([330c8cb](https://github.com/x-software-com/mxl-relm4-components/commit/330c8cb59686fc3427738efcf4f4beeb43520880)) - acpiccolo
