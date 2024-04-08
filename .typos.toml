@@ -3,4 +3,4 @@
 relm = "relm"
 
 [files]
-extend-exclude = ["vcpkg*", "*.md"]
+extend-exclude = ["vcpkg*", "CHANGELOG.md"]
