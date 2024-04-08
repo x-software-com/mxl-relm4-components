@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.11](https://github.com/x-software-com/mxl-relm4-components/compare/b836c9436e0583507e89009549310ec71dc1650f..v0.1.11) - 2024-04-08
+#### Build system
+- change typos exclude - ([4e67977](https://github.com/x-software-com/mxl-relm4-components/commit/4e679774a5f6be9d8595c262c7789c5f5c6d4529)) - acpiccolo
+- exclude *.md files for typos - ([a5b79a2](https://github.com/x-software-com/mxl-relm4-components/commit/a5b79a2dfe8a5352c8f9a2751fcdc1da1e19fc22)) - acpiccolo
+- removed --locked argument - ([b836c94](https://github.com/x-software-com/mxl-relm4-components/commit/b836c9436e0583507e89009549310ec71dc1650f)) - acpiccolo
+#### Miscellaneous Chores
+- update vcpkg to 2024.03.25 - ([a9938f8](https://github.com/x-software-com/mxl-relm4-components/commit/a9938f86f78bdb9cddca989b853b6952f9202716)) - marcbull
+
+- - -
+
 ## [v0.1.10](https://github.com/x-software-com/mxl-relm4-components/compare/3fdc9ae1769eae1101c6984e67d7778cb18ae4ab..v0.1.10) - 2024-04-08
 #### Miscellaneous Chores
 - upgrade submodule - ([3fdc9ae](https://github.com/x-software-com/mxl-relm4-components/commit/3fdc9ae1769eae1101c6984e67d7778cb18ae4ab)) - acpiccolo
