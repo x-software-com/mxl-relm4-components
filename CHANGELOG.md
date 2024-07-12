@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.12](https://github.com/x-software-com/mxl-relm4-components/compare/d7a24a2d3c41cb704c8acd736125a7e1b3d2ed33..v0.1.12) - 2024-07-12
+#### Build system
+- **(deps)** bump crate-ci/typos from 1.18.2 to 1.20.4 - ([d7a24a2](https://github.com/x-software-com/mxl-relm4-components/commit/d7a24a2d3c41cb704c8acd736125a7e1b3d2ed33)) - dependabot[bot]
+#### Miscellaneous Chores
+- bump relm4-icons version to 0.8.3 - ([b0e151a](https://github.com/x-software-com/mxl-relm4-components/commit/b0e151af2f86b5280d0389a290c484b1ed3e0fb2)) - acpiccolo
+
+- - -
+
 ## [v0.1.11](https://github.com/x-software-com/mxl-relm4-components/compare/b836c9436e0583507e89009549310ec71dc1650f..v0.1.11) - 2024-04-08
 #### Build system
 - change typos exclude - ([4e67977](https://github.com/x-software-com/mxl-relm4-components/commit/4e679774a5f6be9d8595c262c7789c5f5c6d4529)) - acpiccolo
