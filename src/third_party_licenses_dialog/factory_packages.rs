@@ -17,13 +17,9 @@ pub struct ThirdPartyLicensePackageInit {
 #[derive(Debug)]
 pub struct ThirdPartyLicensePackageModel {
     pub index: DynamicIndex,
-    pub updating: bool,
-    pub position: usize,
     active: bool,
     pub text: String,
     pub package_name: String,
-    pub package_version: String,
-    pub license: String,
     pub licenses: FactoryVecDeque<ThirdPartyLicenseTextModel>,
 }
 
@@ -85,13 +81,9 @@ impl FactoryComponent for ThirdPartyLicensePackageModel {
 
         let mut model = Self {
             index: index.clone(),
-            updating: false,
-            position: 0,
             active: false,
             text: format!("{} {} ({})", init.package_name, init.package_version, init.license),
             package_name: init.package_name,
-            package_version: init.package_version,
-            license: init.license,
             licenses,
         };
 

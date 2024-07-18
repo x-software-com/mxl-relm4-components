@@ -8,7 +8,6 @@ pub struct ThirdPartyLicenseTextInit {
 
 #[derive(Debug)]
 pub struct ThirdPartyLicenseTextModel {
-    pub index: DynamicIndex,
     pub license: License,
     pub buffer: gtk::TextBuffer,
 }
@@ -40,12 +39,11 @@ impl FactoryComponent for ThirdPartyLicenseTextModel {
         }
     }
 
-    fn init_model(init: Self::Init, index: &DynamicIndex, _sender: FactorySender<Self>) -> Self {
+    fn init_model(init: Self::Init, _index: &DynamicIndex, _sender: FactorySender<Self>) -> Self {
         let buffer = gtk::TextBuffer::new(None);
         buffer.set_text(&init.license.text);
 
         Self {
-            index: index.clone(),
             license: init.license,
             buffer,
         }
