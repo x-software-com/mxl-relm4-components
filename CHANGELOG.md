@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.0](https://github.com/x-software-com/mxl-relm4-components/compare/9437be29fba1f8f4b03439b4d51b8033702311ae..v0.2.0) - 2024-07-18
+#### Build system
+- **(deps)** bump crate-ci/typos from 1.20.4 to 1.23.1 (#15) - ([10479cb](https://github.com/x-software-com/mxl-relm4-components/commit/10479cb725d51a9052c9dd3fd7681ad768bf41b8)) - dependabot[bot]
+- **(deps)** update RELM4 dependencies to 0.9 - ([f1706c5](https://github.com/x-software-com/mxl-relm4-components/commit/f1706c53f7150c5d8be4a2584f577b91b7ebcea5)) - marcbull
+- update vcpkg-ports-mxl submodule - ([74dedf4](https://github.com/x-software-com/mxl-relm4-components/commit/74dedf4be390e1112eb389a806bf0d5aff42533a)) - marcbull
+#### Miscellaneous Chores
+- removed some unused fields - ([9437be2](https://github.com/x-software-com/mxl-relm4-components/commit/9437be29fba1f8f4b03439b4d51b8033702311ae)) - marcbull
+
+- - -
+
 ## [v0.1.12](https://github.com/x-software-com/mxl-relm4-components/compare/d7a24a2d3c41cb704c8acd736125a7e1b3d2ed33..v0.1.12) - 2024-07-12
 #### Build system
 - **(deps)** bump crate-ci/typos from 1.18.2 to 1.20.4 - ([d7a24a2](https://github.com/x-software-com/mxl-relm4-components/commit/d7a24a2d3c41cb704c8acd736125a7e1b3d2ed33)) - dependabot[bot]
