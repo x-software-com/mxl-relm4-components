@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.2](https://github.com/x-software-com/mxl-relm4-components/compare/944ecf76f8bed1b21430455174d9580ffa638fd3..v0.2.2) - 2024-09-02
+#### Miscellaneous Chores
+- update i18n-embed-fl and i18n-embed versions - ([944ecf7](https://github.com/x-software-com/mxl-relm4-components/commit/944ecf76f8bed1b21430455174d9580ffa638fd3)) - acpiccolo
+
+- - -
+
 ## [v0.2.1](https://github.com/x-software-com/mxl-relm4-components/compare/626835c4a1da64a62192ca323310f3618158d538..v0.2.1) - 2024-07-19
 #### Bug Fixes
 - use weak reference instead of strong - ([626835c](https://github.com/x-software-com/mxl-relm4-components/commit/626835c4a1da64a62192ca323310f3618158d538)) - acpiccolo
