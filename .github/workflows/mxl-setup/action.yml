@@ -7,25 +7,9 @@ inputs:
   rust-toolchain-components:
     description: Comma-separated list of components to be additionally installed
     required: false
-outputs:
-  version:
-    value: ${{ steps.get_version.outputs.version }}
-    description: Version of the MXL Relm4 components
 runs:
   using: "composite"
   steps:
-    - name: Determine distribution info
-      id: osinfo
-      shell: bash {0}
-      run: |
-        # TODO: Add cases for macOS and Windows in the future
-        echo "id=$(lsb_release -si)" >> "$GITHUB_OUTPUT"
-        echo "major_version=$(lsb_release -sr | cut -d. -f1)" >> "$GITHUB_OUTPUT"
-    - name: Cache VCPKG packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/vcpkg
-        key: vcpkg-${{ runner.os }}-${{ runner.arch }}
     - name: Install ${{ inputs.rust-toolchain }}
       id: install_rust_toolchain
       uses: dtolnay/rust-toolchain@master
@@ -38,27 +22,8 @@ runs:
       with:
         save-if: ${{ github.ref == 'refs/heads/main' }}
         key: ${{ steps.osinfo.outputs.id }}-${{ steps.osinfo.outputs.major_version }}
-    - name: Execute setup.py
+    - name: Install cargo tools
       shell: bash {0}
       run: |
         source /etc/profile
-        ./setup.py --ci
-    - name: Create dotenv file
-      shell: bash {0}
-      run: |
-        source /etc/profile
-        just mxl-env
-    - name: Setup environment
-      # Use this version becuase of centos7 (updated to node 2.0 with glibc issue)
-      uses: falti/dotenv-action@v1.0.4
-      with:
-        path: .mxl-env
-        keys-case: "bypass"
-        log-variables: true
-        export-variables: true
-    - name: Get version
-      id: get_version
-      shell: bash {0}
-      run: |
-        source /etc/profile
-        echo "version=$(set -e;cargo version-util get-version)" >> "$GITHUB_OUTPUT"
+        cargo install just

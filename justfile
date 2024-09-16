@@ -1,7 +1,15 @@
 #!/usr/bin/env -S just --justfile
 
+test-options := ""
+
 test:
-    cargo test --no-fail-fast --workspace --all-features --all-targets
+    cargo test --no-fail-fast --workspace --all-features --all-targets -- {{test-options}}
+
+test-verbose:
+    just --justfile {{justfile()}} test-options="--nocapture" test
+
+ci-test:
+    xvfb-run --auto-servernum --server-args="-screen 0 800x600x24" just --justfile {{justfile()}} test-verbose
 
 hack:
     cargo install cargo-hack
@@ -13,10 +21,6 @@ audit:
 
 clippy:
     cargo clippy --quiet --release --all-targets --all-features
-
-mxl-env:
-    ./mxl-env.py --print-env --no-export-print-env > .mxl-env
-    @echo "Created '.mxl-env' file"
 
 clean:
     cargo clean
