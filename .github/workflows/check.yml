@@ -31,6 +31,7 @@ jobs:
         id: get_sha
         shell: sh {0}
         run: |
+          set -e
           git config --global --add safe.directory .
           echo "sha_short=$(set -e;git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
       - name: Docker meta
