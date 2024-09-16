@@ -14,10 +14,6 @@ audit:
 clippy:
     cargo clippy --quiet --release --all-targets --all-features
 
-mxl-env:
-    ./mxl-env.py --print-env --no-export-print-env > .mxl-env
-    @echo "Created '.mxl-env' file"
-
 clean:
     cargo clean
     rm -rf vcpkg_installed vcpkg
