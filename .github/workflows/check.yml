@@ -110,8 +110,7 @@ jobs:
         toolchain: [stable, beta]
     needs: [build_docker]
     steps:
-      # Use actions/checkout@v3 becuase of centos7
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Setup MXL Relm4 components build environment
@@ -133,8 +132,7 @@ jobs:
       checks: write
     needs: [build_docker]
     steps:
-      # Use actions/checkout@v3 becuase of centos7
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Setup MXL Relm4 components build environment
@@ -155,8 +153,7 @@ jobs:
       checks: write
     needs: [build_docker]
     steps:
-      # Use actions/checkout@v3 becuase of centos7
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Setup MXL Relm4 components build environment

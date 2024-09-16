@@ -17,8 +17,7 @@ runs:
         toolchain: ${{ inputs.rust-toolchain }}
         components: ${{ inputs.rust-toolchain-components }}
     - name: Cache rust
-      # Use Swatinem/rust-cache@v1 becuase of centos7
-      uses: Swatinem/rust-cache@v1
+      uses: Swatinem/rust-cache@v2
       with:
         save-if: ${{ github.ref == 'refs/heads/main' }}
         key: ${{ steps.osinfo.outputs.id }}-${{ steps.osinfo.outputs.major_version }}
