@@ -167,3 +167,24 @@ jobs:
         uses: taiki-e/install-action@cargo-hack
       - name: cargo hack
         run: cargo hack --feature-powerset --no-dev-deps check
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/${{ github.repository }}/${{ needs.build_docker.outputs.image }}:${{ needs.build_docker.outputs.sha }}
+    permissions:
+      contents: read
+    needs: [build_docker]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Setup MXL Player Components build environment
+        uses: ./.github/workflows/mxl-setup
+        with:
+          rust-toolchain: stable
+      - name: cargo test
+        shell: bash {0}
+        run: |
+          source /etc/profile
+          just ci-test
