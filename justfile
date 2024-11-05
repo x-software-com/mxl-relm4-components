@@ -57,5 +57,8 @@ cargo-fmt-check:
 # Misc recipes:
 #
 
+self-update:
+    cargo install --locked just
+
 clean:
     cargo clean
