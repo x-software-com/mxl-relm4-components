@@ -59,4 +59,3 @@ cargo-fmt-check:
 
 clean:
     cargo clean
-    rm -rf vcpkg_installed vcpkg

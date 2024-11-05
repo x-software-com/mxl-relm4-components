@@ -8,10 +8,6 @@ target/
 **/*.rs.bk
 *.pdb
 
-# vcpkg
-vcpkg/
-vcpkg_installed/
-
 # Ignore backupfiles from merge conflicts.
 *.orig
 
