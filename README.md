@@ -2,6 +2,9 @@
 [![dependency status](https://deps.rs/repo/github/x-software-com/mxl-relm4-components/status.svg)](https://deps.rs/repo/github/x-software-com/mxl-relm4-components)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
+# NOTE
+
+**This repository has been moved to [mxl-crates](https://github.com/x-software-com/mxl-crates).**
 
 # Overview
 
